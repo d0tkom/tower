@@ -1,8 +1,11 @@
 function draw() {
     const c = document.getElementById("canvas");
     const ctx = c.getContext("2d");
-    ctx.canvas.width = window.innerWidth;
-    ctx.canvas.height = window.innerHeight;
+
+    // set canvas width and height to size of the tower image
+    ctx.canvas.width = 1778;
+    ctx.canvas.height = 1778;
+
     const img = document.getElementById("tower");
     ctx.drawImage(img, 0, 0);
 }
