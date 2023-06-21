@@ -17,7 +17,7 @@ function draw() {
         .attr('y', 0)
         .attr('width', width)
         .attr('height', height)
-        .attr("xlink:href", "/bttower.png")
+        .attr("xlink:href", "bttower.png")
         .append("svg:image")
     
     svg.append("rect")
