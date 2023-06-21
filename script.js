@@ -33,16 +33,16 @@ function draw() {
     const circle = logo
         .append('circle')
         .attr('cx', rectX + (rectWidth / 2))
-        .attr('cy', rectY + (rectHeight / 2))
+        .attr('cy', rectY + (rectHeight / 2) - 1)
         .attr('r', circleR)
         .style('fill', "none")
         .style("stroke", "white")
-        .style("stroke-width", 4);
+        .style("stroke-width", 2);
     
     logo.append("text")
         .text("BT")
         .attr("x", rectX + (rectWidth / 2))
-        .attr("y", rectY + (rectHeight / 2) + 7)
+        .attr("y", rectY + (rectHeight / 2) + 6)
         .attr("color", "black")
         .attr("text-anchor", "middle")
         .style("fill", "white")
