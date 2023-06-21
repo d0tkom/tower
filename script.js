@@ -1,16 +1,17 @@
 function draw() {
-    const width = 1000;
-    const height = 1000;
+    const width = 500;
+    const height = 500;
 
-    const rectWidth = 373;
-    const rectHeight = 90;
-    const rectX = 314;
-    const rectY = 206;
+    const rectWidth = 186;
+    const rectHeight = 45;
+    const rectX = 157;
+    const rectY = 103;
+
+    const circleR = 20;
     
     const svg = d3.select('#container')
         .append('svg')
-        .attr('width', width)
-        .attr('height', height);
+        .attr('viewBox', `0 0 ${width} ${height}`);
 
     svg.append("svg:image")
         .attr('x', 0)
@@ -18,7 +19,7 @@ function draw() {
         .attr('width', width)
         .attr('height', height)
         .attr("xlink:href", "bttower.png")
-        .append("svg:image")
+        .append("svg:image");
     
     svg.append("rect")
         .attr('x', rectX)
@@ -33,7 +34,7 @@ function draw() {
         .append('circle')
         .attr('cx', rectX + (rectWidth / 2))
         .attr('cy', rectY + (rectHeight / 2))
-        .attr('r', 30)
+        .attr('r', circleR)
         .style('fill', "none")
         .style("stroke", "white")
         .style("stroke-width", 4);
@@ -41,7 +42,7 @@ function draw() {
     logo.append("text")
         .text("BT")
         .attr("x", rectX + (rectWidth / 2))
-        .attr("y", rectY + (rectHeight / 2) + 10)
+        .attr("y", rectY + (rectHeight / 2) + 7)
         .attr("color", "black")
         .attr("text-anchor", "middle")
         .style("fill", "white")
