@@ -1,32 +1,38 @@
 function draw() {
-    const c = document.getElementById("canvas");
-    const ctx = c.getContext("2d");
-    ctx.canvas.width = window.innerWidth;
-    ctx.canvas.height = window.innerHeight;
-    const img = document.getElementById("tower");
-    ctx.drawImage(img, 0, 0);
-}
+    const width = 1000;
+    const height = 1000;
 
-function drawLogoD3() {
-    const width = 400;
-    const height = 170;
+    const rectWidth = 373;
+    const rectHeight = 90;
+    const rectX = 314;
+    const rectY = 206;
     
     const svg = d3.select('#container')
         .append('svg')
         .attr('width', width)
         .attr('height', height);
+
+    svg.append("svg:image")
+        .attr('x', 0)
+        .attr('y', 0)
+        .attr('width', width)
+        .attr('height', height)
+        .attr("xlink:href", "/bttower.png")
+        .append("svg:image")
     
     svg.append("rect")
-        .attr("width", "100%")
-        .attr("height", "100%")
+        .attr('x', rectX)
+        .attr('y', rectY)
+        .attr("width", rectWidth)
+        .attr("height", rectHeight)
         .attr("fill", "purple")
     
     const logo = svg.append("g");
     
     const circle = logo
         .append('circle')
-        .attr('cx', width / 2)
-        .attr('cy', height / 2)
+        .attr('cx', rectX + (rectWidth / 2))
+        .attr('cy', rectY + (rectHeight / 2))
         .attr('r', 30)
         .style('fill', "none")
         .style("stroke", "white")
@@ -34,19 +40,19 @@ function drawLogoD3() {
     
     logo.append("text")
         .text("BT")
-        .attr("x", width / 2)
-        .attr("y", height / 2 + 10)
+        .attr("x", rectX + (rectWidth / 2))
+        .attr("y", rectY + (rectHeight / 2) + 10)
         .attr("color", "black")
         .attr("text-anchor", "middle")
         .style("fill", "white")
     
-    const timeInterval = 50;
-    let i = width;
+    const timeInterval = 30;
+    let i = rectWidth;
     setInterval(function(){
-        if (i > -width) {
-            i -= 10;
+        if (i > -rectWidth) {
+            i -= 3;
         } else {
-            i = width;
+            i = rectWidth;
         }
         updateLogo(i)
     }, timeInterval);
