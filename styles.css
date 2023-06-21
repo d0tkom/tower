@@ -3,10 +3,9 @@ html, body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 32px;
-    margin: 0;
 }
 
-/* Itt nem tudom mit csinálok...  */
+/* center container on screen */
 #container {
     display: block;
     margin-left: auto;
