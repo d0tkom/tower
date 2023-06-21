@@ -5,6 +5,10 @@ html, body {
     font-size: 32px;
 }
 
+img {
+    display: none;
+}
+
 /* center container on screen */
 #container {
     display: block;
